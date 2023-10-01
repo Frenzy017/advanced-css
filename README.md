@@ -187,3 +187,13 @@ declarations and will be applied*
 * Example: 
 The 7 Folders: base/, components/ , layout/, pages/
 themes/, abstracts/, vendors/
+
+**How to start a project with Sass**
+
+* CD into main directory
+* Run npm init
+* Run npm install node-sass
+* mkdir sass
+* CD sass/
+* touch main.scss
+* delete the default test script and type: "compile:sass": "node-sass sass/main.scss (instance path) css/style.css (output path)"
