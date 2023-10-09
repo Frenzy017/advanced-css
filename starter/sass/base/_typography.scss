@@ -1,0 +1,66 @@
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  //font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  /* padding to the entire web page from left / top / bottom / right*/
+  padding: 30px;
+}
+
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  /* removes the shaking from the animation */
+  /* it's the main element that moves this animation*/
+  backface-visibility: hidden;
+
+  /* margin is used to add white space between elements   */
+  margin-bottom: 60px;
+
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*animation-iteration-count: 3;*/
+    /*animation-delay: 3s;*/
+  }
+
+  &--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+/* Display Block */
+/* Occupy the entire width that is available*/
+/*They also create line breaks after and before them*/
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient (to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  color: $color-primary-light;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+
+}

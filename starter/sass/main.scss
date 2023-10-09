@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/grid";
+@import "layout/header";
+
+@import "pages/home";
+
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
+
+
+
+
+
+
+

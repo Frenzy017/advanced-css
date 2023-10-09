@@ -1,0 +1,70 @@
+/* Pseudo-classes are a special state of a selector*/
+/* We use them to style elements under a special condition*/
+/* Such as checkbox click, hover, selecting last child*/
+
+/*Visited state is when the user has already clicked*/
+
+
+.btn {
+
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, .2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  /*When we click an element its the active state property*/
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, .2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+
+    padding: 15px 40px;
+    /*Inline block is useful to give some paddings and heights */
+    /* So it doesn't cut out other elements in*/
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+
+    /*Properties: shadow in x, shadow in y, blur, color*/
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  &--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+
+}
