@@ -12,4 +12,18 @@
                   rgba($color-primary-dark, 0.8)),
   url("/starter/img/nat-4.jpg");
   background-size: cover;
+
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  // direct child is basically whoever the first child is, it will be the only one selected
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem;
 }
