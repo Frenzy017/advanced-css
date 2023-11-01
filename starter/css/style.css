@@ -116,6 +116,20 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 /* Pseudo-classes are a special state of a selector*/
 /* We use them to style elements under a special condition*/
 /* Such as checkbox click, hover, selecting last child*/
@@ -338,7 +352,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -447,5 +461,16 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
+  position: relative;
+  padding: 15rem 0; }
+
+.section-book {
   padding: 15rem 0;
-  background-color: #f7f7f7; }
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), orangered), url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem; }

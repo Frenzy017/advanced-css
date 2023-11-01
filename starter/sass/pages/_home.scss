@@ -30,6 +30,21 @@
 
 
 .section-stories {
+  position: relative;
   padding: 15rem 0;
-  background-color: $color-grey-light-1;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.book {
+  background-image: linear-gradient(rgba(105deg, $color-white, .9) 0%, orangered),
+  url(../img/nat-10.jpg);
+  // Cover = stretching the image to occupy the entire container
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  height: 50rem;
 }
