@@ -14,12 +14,15 @@
 @import "components/composition";
 @import "components/feature-box";
 @import "components/story";
+@import "components/form";
 
+
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 
-@import "pages/home";
 
+@import "pages/home";
 
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;

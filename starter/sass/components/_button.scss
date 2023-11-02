@@ -6,6 +6,7 @@
 
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -16,6 +17,10 @@
     transition: all .2s;
     position: relative;
     font-size: $default-font-size;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
 
   }
 
@@ -30,7 +35,9 @@
   }
 
   /*When we click an element its the active state property*/
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba($color-black, .2);
   }
