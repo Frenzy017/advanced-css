@@ -1,6 +1,5 @@
 
 .navigation {
-
   &__checkbox {
     display: none;
   }
@@ -81,6 +80,7 @@
     transform: translateX(1rem);
   }
 
+
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
@@ -88,6 +88,11 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
   }
 
   &__icon, &__icon::before, &__icon::after {
@@ -104,35 +109,44 @@
     transition: all .2s;
   }
 
+  &__icon::before, &__icon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+  }
+
+  &__icon::before {
+    top: -.8rem;
+  }
+
+  &__icon::after {
+    top: .8rem;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon:after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+
 }
 
 
-&::before {
-  top: -.8rem;
-}
-
-&::after {
-  top: .8rem;
-}
-
-&__button:hover &::before {
-  top: -1rem;
-}
-
-&__button:hover &::after {
-  top: 1rem;
-}
-
-&:checked + &__button & {
-  background-color: transparent;
-}
-
-&:checked + &__button &:before {
-  top: 0;
-  transform: rotate(135deg);
-}
-
-&:checked + &__button &:after {
-  top: 0;
-  transform: rotate(-135deg);
-}
