@@ -12,3 +12,66 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+
+/*
+  0 - 600 px: Phone
+  600 - 900 px: Tablet portrait
+  900 - 1200 px: Tablet landscape
+  1200 - 1800 px: Normal styles apply
+  1800px+: Big desktop
+
+  $breakpoint argument choices:
+   - phone
+   - tab-port
+   - tab-lab
+   - big-desktop
+
+   1 em = 16px
+*/
+
+
+// Using ems units for media queries is best practice
+// We don't use rems since they default to the browser (16px) and not the the root element defined in the body
+
+
+// content directive allows us to pass a block of code into mixin
+
+// 600px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content
+    }
+  }
+
+  // 900px
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content
+    }
+  }
+
+  // 1200px
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content
+    }
+  }
+
+  // 1800px
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content
+    }
+  }
+}
+
+
+
+

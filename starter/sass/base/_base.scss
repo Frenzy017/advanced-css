@@ -5,8 +5,34 @@
 }
 
 html {
+
+  /*
+      !!Rule of the thumb media queries!!
+
+      - always put the larger ones before the smaller ones
+   */
+
   // This defines what 1 rem is
-  font-size: 62.5%;
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+
+
+  @include respond(tab-land) { // width < 900?
+    font-size: 56.25%; // 1 rem = 8px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) { // width < 600?
+    font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) { // width < 900?
+    font-size: 30%; // 1 rem = 4.8px, 4.8p/16 = 30%
+  }
+
+  @include respond(big-desktop) { // width > 1800?
+    font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+  }
+
+
 }
 
 body {

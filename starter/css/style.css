@@ -1,10 +1,42 @@
+/*
+  0 - 600 px: Phone
+  600 - 900 px: Tablet portrait
+  900 - 1200 px: Tablet landscape
+  1200 - 1800 px: Normal styles apply
+  1800px+: Big desktop
+
+  $breakpoint argument choices:
+   - phone
+   - tab-port
+   - tab-lab
+   - big-desktop
+
+   1 em = 16px
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 html {
+  /*
+      !!Rule of the thumb media queries!!
+
+      - always put the larger ones before the smaller ones
+   */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
