@@ -26,14 +26,21 @@
     height: 15rem;
     float: left;
 
-    // that is the center of the circle, basically the center being horizontal and vertical
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
 
     // use transform if we want to add space between text and a floated element, not margins or paddings
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0 )) {
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      // that is the center of the circle, basically the center being horizontal and vertical
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
