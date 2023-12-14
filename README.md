@@ -1,6 +1,43 @@
 # advanced-css
 
-Creating advanced css / sass layouts with animations
+
+
+# Natours Project 🏞️
+
+This project was part of Jonas Schmedtmann's Advances CSS & SASS course on Udemy.
+
+The goal of this repo is to practice the following skill sets:
+
+- CSS
+  - **Animations**: primary objective of this project
+    - `transition` & `transform`
+    - `hovering effects`
+    - `clip-path`
+    - `skew properties`
+
+
+
+## Screenshots
+
+> Normal View / Desktop Layout
+
+
+![Screenshot Header](/starter/screenshots/header.png)
+![Screenshot Tour](/starter/screenshots/tour.png)
+![Screenshot Info](/starter/screenshots/info.png)
+![Screenshot Popular](/starter/screenshots/popular.png)
+![Screenshot Story](/starter/screenshots/story.png)
+![Screenshot Booking](/starter/screenshots/booking.png)
+![Screenshot Footer](/starter/screenshots/footer.png)
+
+
+
+## Helpful information on CSS to use for future reference
+
+
+
+
+
 
 Three pillars to write good html and css
 
