@@ -15,6 +15,9 @@ The goal of this repo is to practice the following skill sets:
     - `clip-path`
     - `skew properties`
 
+## Links
+
+[Live Demo](https://nature-frenzy017.netlify.app/)
 
 
 ## Screenshots
